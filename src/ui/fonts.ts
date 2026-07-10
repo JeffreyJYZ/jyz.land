@@ -1,11 +1,4 @@
-import { DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
-
-export const fontDMSans = DM_Sans({
-	subsets: ["latin"],
-	weight: "variable",
-	variable: "--dm-sans",
-});
 
 export const fontSFPro = localFont({
 	fallback: ["sans-serif"],
@@ -22,7 +15,7 @@ export const fontSFPro = localFont({
 		},
 	],
 	variable: "--sf-pro",
-	display: "swap",
+	display: "fallback",
 });
 
 export const fontLora = localFont({
@@ -40,73 +33,25 @@ export const fontLora = localFont({
 		},
 	],
 	variable: "--lora",
-	display: "swap",
+	display: "fallback",
 });
 
 export const fontSFMono = localFont({
 	fallback: ["monospace"],
 	src: [
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Light.otf",
-			style: "normal",
-			weight: "300",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-LightItalic.otf",
-			style: "italic",
-			weight: "300",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Regular.otf",
-			style: "normal",
-			weight: "400",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-RegularItalic.otf",
-			style: "italic",
-			weight: "400",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Medium.otf",
-			style: "normal",
-			weight: "500",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-MediumItalic.otf",
-			style: "italic",
-			weight: "500",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Semibold.otf",
-			style: "normal",
-			weight: "600",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-SemiboldItalic.otf",
-			style: "italic",
-			weight: "600",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Bold.otf",
-			style: "normal",
-			weight: "700",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-BoldItalic.otf",
-			style: "italic",
-			weight: "700",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-Heavy.otf",
-			style: "normal",
-			weight: "800",
-		},
-		{
-			path: "../../public/fonts/sf-mono/SF-Mono-HeavyItalic.otf",
-			style: "italic",
-			weight: "800",
-		},
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Light.otf", style: "normal", weight: "300" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-LightItalic.otf", style: "italic", weight: "300" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Regular.otf", style: "normal", weight: "400" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-RegularItalic.otf", style: "italic", weight: "400" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Medium.otf", style: "normal", weight: "500" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-MediumItalic.otf", style: "italic", weight: "500" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Semibold.otf", style: "normal", weight: "600" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-SemiboldItalic.otf", style: "italic", weight: "600" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Bold.otf", style: "normal", weight: "700" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-BoldItalic.otf", style: "italic", weight: "700" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-Heavy.otf", style: "normal", weight: "800" },
+		{ path: "../../public/fonts/sf-mono/SF-Mono-HeavyItalic.otf", style: "italic", weight: "800" },
 	],
 	variable: "--sf-mono",
-	display: "swap",
+	display: "fallback",
 });

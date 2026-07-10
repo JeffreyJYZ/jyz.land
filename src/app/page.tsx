@@ -1,10 +1,11 @@
 export default function Home() {
 	return (
-		<>
-			<h1 className="p-10">Welcome to JYZ Land</h1>
-			<main className="p-20">
-				<p>Please visit later for updates</p>
-			</main>
-		</>
+		<section className="hero">
+			<h1 className="hero-heading">Welcome to JYZ Land</h1>
+			<p className="hero-sub">
+				A quiet corner of the internet. Come back later for updates,
+				notes, and small experiments.
+			</p>
+		</section>
 	);
 }

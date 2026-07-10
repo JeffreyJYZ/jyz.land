@@ -1,0 +1,31 @@
+.hero {
+	@apply flex flex-col items-center px-6 pt-28 pb-20 text-center;
+}
+
+.hero-heading {
+	@apply text-balance text-5xl font-semibold tracking-tight sm:text-6xl;
+}
+
+.hero-sub {
+	@apply mt-6 max-w-xl text-balance text-base text-muted sm:text-lg;
+}
+
+.command-box {
+	@apply mt-10 w-full max-w-md overflow-hidden rounded-md border border-border bg-card;
+}
+
+.command-tabs {
+	@apply flex border-b border-border text-xs;
+}
+
+.command-tab {
+	@apply px-3 py-2 text-muted;
+}
+
+.command-tab.is-active {
+	@apply border-b border-foreground text-foreground;
+}
+
+.command-code {
+	@apply font-mono block px-4 py-3 text-left text-sm text-foreground;
+}

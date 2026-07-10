@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { fontSFPro, fontLora, fontSFMono } from "@/ui/fonts";
 
@@ -16,12 +17,46 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
+			data-scroll-behavior="smooth"
 			className={`${fontSFPro.variable} ${fontLora.variable} ${fontSFMono.variable} antialiased`}
 		>
 			<body>
-				<main className="min-h-dvh border-x-5 border-gray-800 bg-neutral-900 md:mx-50">
-					{children}
-				</main>
+				<div className="site-shell">
+					<div className="site-container">
+						<nav className="site-nav">
+							<Link className="site-nav-brand" href="/">
+								JYZ&nbsp;Land
+							</Link>
+							<div className="site-nav-links">
+								<a
+									className="site-nav-link"
+									href="https://github.com/JeffreyJYZ"
+									target="_blank"
+								>
+									GitHub
+								</a>
+								<Link className="site-nav-link" href="/about">
+									About
+								</Link>
+							</div>
+						</nav>
+						<hr className="sep" />
+						<main>{children}</main>
+						<hr className="sep" />
+						<footer className="site-footer">
+							<div className="site-footer-links">
+								<a
+									className="site-nav-link"
+									href="https://github.com/JeffreyJYZ"
+									target="_blank"
+								>
+									GitHub
+								</a>
+							</div>
+							<span>© 2026 Yizhou Jiang</span>
+						</footer>
+					</div>
+				</div>
 			</body>
 		</html>
 	);
