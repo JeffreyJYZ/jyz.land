@@ -19,10 +19,11 @@ export default function Icon() {
 					alignItems: "center",
 					justifyContent: "center",
 					fontSize: 18,
-					fontWeight: 600,
+					fontWeight: 900,
 					letterSpacing: -1,
 					fontFamily: "monospace",
 					border: "1px solid #3e3e3e",
+					borderRadius: 8,
 				}}
 			>
 				J
