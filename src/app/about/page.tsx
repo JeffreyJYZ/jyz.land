@@ -16,6 +16,7 @@ export default function AboutPage() {
 					className="link"
 					href="https://github.com/JeffreyJYZ"
 					target="_blank"
+					rel="noopener"
 				>
 					GitHub
 				</a>{" "}
@@ -24,6 +25,7 @@ export default function AboutPage() {
 					className="link"
 					href="https://reddit.com/user/Common-Upstairs1656"
 					target="_blank"
+					rel="noopener"
 				>
 					Reddit
 				</a>

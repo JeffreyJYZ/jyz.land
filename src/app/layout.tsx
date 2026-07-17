@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import { fontSFPro, fontLora, fontSFMono } from "@/ui/fonts";
+import { fontLora, fontSFMono, fontSFPro } from "@/ui/fonts";
 
 export const metadata: Metadata = {
 	title: "JYZ Land",
@@ -32,6 +32,7 @@ export default function RootLayout({
 									className="site-nav-link"
 									href="https://github.com/JeffreyJYZ"
 									target="_blank"
+									rel="noopener"
 								>
 									GitHub
 								</a>
@@ -49,6 +50,7 @@ export default function RootLayout({
 									className="site-nav-link"
 									href="https://github.com/JeffreyJYZ"
 									target="_blank"
+									rel="noopener"
 								>
 									GitHub
 								</a>

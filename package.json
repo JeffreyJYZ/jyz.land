@@ -8,8 +8,10 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint",
-		"fmt": "prettier -w ."
+		"lint": "biome lint",
+		"check": "biome check",
+		"fmt": "biome format --write",
+		"ci": "biome ci"
 	},
 	"dependencies": {
 		"next": "16.2.10",
@@ -17,22 +19,16 @@
 		"react-dom": "19.2.7"
 	},
 	"devDependencies": {
-		"@eslint-react/eslint-plugin": "5.11.3",
-		"@next/eslint-plugin-next": "16.2.10",
+		"@biomejs/biome": "2.5.4",
 		"@tailwindcss/postcss": "^4.3.2",
 		"@types/node": "26.1.1",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"babel-plugin-react-compiler": "1.0.0",
-		"eslint": "10.6.0",
-		"globals": "^17.7.0",
-		"postcss": "^8.5.16",
+		"postcss": "^8.5.19",
 		"postcss-load-config": "^6.0.1",
-		"prettier": "^3.9.4",
-		"prettier-plugin-tailwindcss": "^0.8.0",
 		"tailwindcss": "^4",
-		"typescript": "6.0.3",
-		"typescript-eslint": "^8.63.0"
+		"typescript": "6.0.3"
 	},
 	"ignoreScripts": [
 		"sharp",
