@@ -25,3 +25,15 @@
 .stat-label {
 	@apply mt-2 text-xs uppercase tracking-wider text-muted;
 }
+
+.section-cta {
+	@apply mt-6 font-mono text-sm;
+}
+
+.section.block {
+	color: inherit;
+}
+
+.section.block:hover .section-cta {
+	text-decoration: underline;
+}
