@@ -28,14 +28,14 @@ export default function RootLayout({
 								JYZ&nbsp;Land
 							</Link>
 							<div className="site-nav-links">
-								<a
+								<Link
 									className="site-nav-link"
 									href="https://github.com/JeffreyJYZ"
 									target="_blank"
 									rel="noopener"
 								>
 									GitHub
-								</a>
+								</Link>
 								<Link className="site-nav-link" href="/about">
 									About
 								</Link>
@@ -46,14 +46,14 @@ export default function RootLayout({
 						<hr className="sep" />
 						<footer className="site-footer">
 							<div className="site-footer-links">
-								<a
+								<Link
 									className="site-nav-link"
 									href="https://github.com/JeffreyJYZ"
 									target="_blank"
 									rel="noopener"
 								>
 									GitHub
-								</a>
+								</Link>
 							</div>
 							<span>© 2026 Yizhou Jiang</span>
 						</footer>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "About — JYZ Land",
@@ -12,23 +13,23 @@ export default function AboutPage() {
 			<p className="section-sub">
 				I&rsquo;m Yizhou Jiang: developer and student. This site is a
 				work in progress. Find me on{" "}
-				<a
+				<Link
 					className="link"
 					href="https://github.com/JeffreyJYZ"
 					target="_blank"
 					rel="noopener"
 				>
 					GitHub
-				</a>{" "}
+				</Link>{" "}
 				or{" "}
-				<a
+				<Link
 					className="link"
 					href="https://reddit.com/user/Common-Upstairs1656"
 					target="_blank"
 					rel="noopener"
 				>
 					Reddit
-				</a>
+				</Link>
 				.
 			</p>
 		</section>
