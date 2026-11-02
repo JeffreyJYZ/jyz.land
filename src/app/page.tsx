@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroWindow } from "@/ui/hero-window";
 
 const DOCS = [
 	{
@@ -25,11 +26,22 @@ export default function Home() {
 	return (
 		<>
 			<section className="hero">
-				<h1 className="hero-heading">Welcome to JYZ Land</h1>
-				<p className="hero-sub">
-					A quiet corner of the internet. Come back later for updates,
-					notes, and small experiments.
-				</p>
+				<div className="hero-copy">
+					<h1 className="hero-heading">Welcome to JYZ Land</h1>
+					<p className="hero-sub">
+						A quiet corner of the internet. Come back later for
+						updates, notes, and small experiments.
+					</p>
+					<div className="command-box">
+						<div className="command-tabs">
+							<span className="command-tab is-active">bun</span>
+						</div>
+						<p className="command-code">bun add -g jyz-tool</p>
+					</div>
+				</div>
+				<div className="hero-shot">
+					<HeroWindow />
+				</div>
 			</section>
 
 			<Link href="/vobes" className="section block">
