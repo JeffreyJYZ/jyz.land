@@ -48,13 +48,13 @@ export default function Home() {
 					occasional desktop app.
 				</p>
 				<div className="hero-links">
-					<a
+					<Link
 						className="hero-link"
 						href="https://github.com/JeffreyJYZ"
 						{...NEW_TAB}
 					>
 						GitHub
-					</a>
+					</Link>
 					<Link className="hero-link" href="/about">
 						About
 					</Link>
@@ -63,7 +63,7 @@ export default function Home() {
 
 			<div className="section-list">
 				{PROJECTS.map((project) => (
-					<a
+					<Link
 						key={project.href}
 						href={project.href}
 						className="section block"
@@ -74,7 +74,7 @@ export default function Home() {
 							<p className="section-sub">{project.sub}</p>
 							<p className="section-cta">{project.cta}</p>
 						</div>
-					</a>
+					</Link>
 				))}
 			</div>
 		</>
