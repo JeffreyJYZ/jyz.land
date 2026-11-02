@@ -12,8 +12,5 @@
 		"parser": {
 			"tailwindDirectives": true
 		}
-	},
-	"files": {
-		"includes": ["**", "!src/ui/stageshow"]
 	}
 }

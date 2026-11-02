@@ -1,18 +1,5 @@
 .hero {
-	@apply grid grid-cols-1 items-center gap-14 px-6 pt-24 pb-20 sm:gap-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:pt-28;
-}
-
-/* The copy column is left-aligned on desktop and centred on a phone, so the
-   heading keeps company with the window rather than floating above it. */
-.hero-copy {
-	@apply flex flex-col items-center text-center lg:items-start lg:text-left;
-}
-
-.hero-shot {
-	@apply w-full;
-	/* The window runs past the section's right edge, so it reads as a product
-	   continuing beyond the page rather than a card pasted in the middle. */
-	@apply lg:-mr-16 xl:-mr-24;
+	@apply flex flex-col items-center px-6 pt-28 pb-20 text-center;
 }
 
 .hero-heading {
@@ -41,4 +28,12 @@
 
 .command-code {
 	@apply font-mono block px-4 py-3 text-left text-sm text-foreground;
+}
+
+.hero-links {
+	@apply mt-8 flex items-center gap-6 font-mono text-sm;
+}
+
+.hero-link {
+	@apply text-muted transition-colors hover:text-foreground;
 }

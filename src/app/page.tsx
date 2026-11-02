@@ -1,7 +1,22 @@
 import Link from "next/link";
-import { HeroWindow } from "@/ui/hero-window";
 
-const DOCS = [
+// External links open in a new tab: the site is a hub, so leaving it should
+// never cost the reader their place here. Internal routes stay in-tab.
+const NEW_TAB = { target: "_blank", rel: "noreferrer noopener" } as const;
+
+const PROJECTS = [
+	{
+		href: "https://vobes.jyz.land",
+		title: "Vobes",
+		sub: "A project management desktop app for makers who prefer quiet tools over noisy dashboards.",
+		cta: "Open Vobes →",
+	},
+	{
+		href: "https://tool.jyz.land",
+		title: "jyz",
+		sub: "One config file, and a CLI that behaves as whatever package manager a project already uses.",
+		cta: "Open jyz →",
+	},
 	{
 		href: "https://quarry.jyz.land",
 		title: "Quarry",
@@ -26,44 +41,42 @@ export default function Home() {
 	return (
 		<>
 			<section className="hero">
-				<div className="hero-copy">
-					<h1 className="hero-heading">Welcome to JYZ Land</h1>
-					<p className="hero-sub">
-						A quiet corner of the internet. Come back later for
-						updates, notes, and small experiments.
-					</p>
-					<div className="command-box">
-						<div className="command-tabs">
-							<span className="command-tab is-active">bun</span>
-						</div>
-						<p className="command-code">bun add -g jyz-tool</p>
-					</div>
-				</div>
-				<div className="hero-shot">
-					<HeroWindow />
+				<h1 className="hero-heading">Yizhou Jiang</h1>
+				<p className="hero-sub">
+					I build small, quiet tools for people who work with AI
+					coding agents: command-line utilities, docs, and the
+					occasional desktop app.
+				</p>
+				<div className="hero-links">
+					<a
+						className="hero-link"
+						href="https://github.com/JeffreyJYZ"
+						{...NEW_TAB}
+					>
+						GitHub
+					</a>
+					<Link className="hero-link" href="/about">
+						About
+					</Link>
 				</div>
 			</section>
 
-			<Link href="/vobes" className="section block">
-				<div className="mx-auto max-w-xl text-center">
-					<h2 className="section-heading">Vobes</h2>
-					<p className="section-sub">
-						A project management desktop app for makers who prefer
-						quiet tools over noisy dashboards.
-					</p>
-					<p className="section-cta">Open Vobes →</p>
-				</div>
-			</Link>
-
-			{DOCS.map((doc) => (
-				<a key={doc.href} href={doc.href} className="section block">
-					<div className="mx-auto max-w-xl text-center">
-						<h2 className="section-heading">{doc.title}</h2>
-						<p className="section-sub">{doc.sub}</p>
-						<p className="section-cta">{doc.cta}</p>
-					</div>
-				</a>
-			))}
+			<div className="section-list">
+				{PROJECTS.map((project) => (
+					<a
+						key={project.href}
+						href={project.href}
+						className="section block"
+						{...NEW_TAB}
+					>
+						<div className="mx-auto max-w-xl text-center">
+							<h2 className="section-heading">{project.title}</h2>
+							<p className="section-sub">{project.sub}</p>
+							<p className="section-cta">{project.cta}</p>
+						</div>
+					</a>
+				))}
+			</div>
 		</>
 	);
 }
